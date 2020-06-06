@@ -40,6 +40,8 @@ import com.licenta.android.transfile_ii.middleend.Link;
             }
         });
 
+        // Srting p ;
+
         btn2 = view.findViewById(R.id.pick);
         btn2.setOnClickListener(new View.OnClickListener()
         {
@@ -47,7 +49,7 @@ import com.licenta.android.transfile_ii.middleend.Link;
             public void onClick(View v)
             {
                 fileIntent=new Intent(Intent.ACTION_GET_CONTENT);
-                fileIntent.setType("folder/*");
+                fileIntent.setType("file/*");
                 startActivityForResult(fileIntent,10);
 
             }
