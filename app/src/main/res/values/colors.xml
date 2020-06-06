@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorGrey">#505050</color>
+
+    <color name="colorBackgroundSettings">#FFFFFF</color>
+    <color name="colorBackgroundHome">#FFFFFF</color>
+    <color name="colorBackgroundFileDown">#FFFFFF</color>
+    <color name="colorBackgroundFileUp">#FFFFFF</color>
+
+    <color name="colorBlueSaintAlbert">#0F1F2F</color>
+    <color name="colorNavHeader">#678DDE</color>
+    <color name="colorBrownSaintAlbert">#5C341C</color>
+    <color name="colorOrangeSaintAlbert">#F05C22</color>
+</resources>

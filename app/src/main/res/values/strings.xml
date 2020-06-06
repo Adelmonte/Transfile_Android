@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TransFile</string>
+
+    <string name="navigation_drawer_open">Deschide dulapul de activitați</string>
+    <string name="navigation_drawer_close">Inchide dulapul de activitați</string>
+    <string name="app_version">TransFile 1.0</string>
+    <string name="name">Student: Mihai-Alexandru Muntean</string>
+    <string name="settings">Setări</string>
+    <string name="home">Acasă</string>
+    <string name="file_up">Trimite fișier</string>
+    <string name="file_down">Recepționează fișier</string>
+
+    <string name="sett_frag_title">Fragmentul de setări</string>
+    <string name="error">"Introduceți corect parametrii transmisiei!!!"</string>
+    <string name="hint_ip">"Inserați adresa IPv4 a dispozitivului server."</string>
+    <string name="hint_port">"Inserați portul logic de comunicare cu dispozitivul server."</string>
+
+    <string name="ftps">File Transfer Protocol Secured</string>
+    <string name="ftp">File Transfer Protocol</string>
+    <string name="des">Data Encryption Standard</string>
+    <string name="aes">Advanced Encryption Standard</string>
+    <string name="bf">Blowfish Algorithm</string>
+
+    <string name="alg_tag">Algoritmul de criptare</string>
+    <string name="protocol_tag">Protocolul de transfer</string>
+
+    <string name="cl_tag">Setări Client</string>
+    <string name="sv_tag">Setări Server</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

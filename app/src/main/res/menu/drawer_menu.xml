@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- stau selectate si deschid o activitate-->
+    <group android:checkableBehavior="single">
+        <!-- aici se pun intrarile din meniu-->
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"/>
+
+        <item
+            android:id="@+id/nav_file_send"
+            android:icon="@drawable/ic_file_upload"
+            android:title="@string/file_up"/>
+
+        <item
+            android:id="@+id/nav_file_rec"
+            android:icon="@drawable/ic_file_download"
+            android:title="@string/file_down"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings"/>
+    </group>
+</menu>
