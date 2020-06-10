@@ -1,9 +1,7 @@
 package com.licenta.android.transfile_ii.frontend.fragments;
 
-import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.net.Uri;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -156,7 +154,9 @@ public class FileDescr extends Fragment {
 
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getContext().startActivity(intent);
-        } catch (ActivityNotFoundException e) {
+        }
+        catch (ActivityNotFoundException e)
+        {
             Toast.makeText(getContext(), "No application found which can open the file", Toast.LENGTH_SHORT).show();
         }
     }

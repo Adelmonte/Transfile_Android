@@ -3,15 +3,11 @@ package com.licenta.android.transfile_ii.frontend.fragments;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.app.Activity.*;
 import com.licenta.android.transfile_ii.R;
 import com.licenta.android.transfile_ii.middleend.Link;
 
