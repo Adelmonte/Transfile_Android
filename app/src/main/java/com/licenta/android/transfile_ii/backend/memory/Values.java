@@ -250,26 +250,29 @@ public class Values
 
     public static String filePathAdjusted(String path)
     {
+        String is ="/document/primary:";
+        String sdCardS = "/document/62A2-4A17:";
         String manevra="";
-        int bound = path.length();
-        int occurence = 0;
-        for (int i=0;i<bound;i++)
+        int infBound = path.indexOf(':');
+        if (path.contains(is))
         {
-            char c= path.charAt(i);
-            if (path.charAt(i)=='/')
+            manevra="/storage/emulated/0/";
+            int supBound = path.length();
+            for (int i=infBound+1;i<supBound;i++)
             {
-                occurence++;
-            }
-            if ((occurence==2)&& (c==':'))
-            {
-                manevra = manevra + "/";
-            }
-            else
-            {
-
-                manevra = manevra + c;
+                manevra = manevra + path.charAt(i);
             }
         }
+        else
+            if (path.contains(sdCardS))
+            {
+                manevra="/storage/62A2-4A17/";
+                int supBound = path.length();
+                for (int i=infBound;i<supBound;i++)
+                {
+                    manevra = manevra + path.charAt(i);
+                }
+            }
         return manevra;
     }
 }

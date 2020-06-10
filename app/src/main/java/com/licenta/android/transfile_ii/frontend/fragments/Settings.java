@@ -1,8 +1,7 @@
 package com.licenta.android.transfile_ii.frontend.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +20,7 @@ public class Settings extends Fragment implements View.OnClickListener
 
     View view;
     TextView error;
-    Button btn;
+    FloatingActionButton btn;
     RadioButton rb;
     String protocol;
     String algorithm;
@@ -47,20 +46,22 @@ public class Settings extends Fragment implements View.OnClickListener
         port = view.findViewById(R.id.port);
 
         alg = view.findViewById(R.id.protocol);
-        int radioint = alg.getCheckedRadioButtonId();
-        rb = view.findViewById(radioint);
-        algorithm = rb.getText().toString();
-
         prot = view.findViewById(R.id.algorithm);
-        radioint = prot.getCheckedRadioButtonId();
-        rb = view.findViewById(radioint);
-        protocol = rb.getText().toString();
+        int radioint;
 
         btn.setOnClickListener(this);
 
         if (err!=0)
         {
            error.setText(R.string.error);
+
+            radioint = alg.getCheckedRadioButtonId();
+            rb = view.findViewById(radioint);
+            algorithm = rb.getText().toString();
+
+            radioint = prot.getCheckedRadioButtonId();
+            rb = view.findViewById(radioint);
+            protocol = rb.getText().toString();
         }
         return view;
     }

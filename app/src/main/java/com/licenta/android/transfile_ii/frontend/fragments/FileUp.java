@@ -47,7 +47,9 @@ import com.licenta.android.transfile_ii.middleend.Link;
             public void onClick(View v)
             {
                 fileIntent=new Intent(Intent.ACTION_GET_CONTENT);
-                fileIntent.setType("folder/*");
+                fileIntent.setType("*/*");
+                // folder, permite vizualizea doar a folderelor
+
                 startActivityForResult(fileIntent,10);
 
             }
@@ -66,11 +68,18 @@ import com.licenta.android.transfile_ii.middleend.Link;
                     System.out.println("Ajunge aici");
                     FileDescr fileDescr = new FileDescr();
                     fileDescr.setIntent(data);
-                    getActivity().
-                            getSupportFragmentManager().
+                    try
+                    {
+                        getActivity().
+                                getSupportFragmentManager().
                                 beginTransaction().
-                                    replace(R.id.fragment_container, fileDescr).
-                                        commit();
+                                replace(R.id.fragment_container, fileDescr).
+                                commit();
+                    }
+                    catch (NullPointerException e)
+                    {
+                        e.printStackTrace();
+                    }
                 }
             }
             break;
