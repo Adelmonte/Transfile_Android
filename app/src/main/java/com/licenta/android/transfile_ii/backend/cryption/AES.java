@@ -1,3 +1,12 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa AES
+ * Folosită pentru criptarea și decriptarea datelor folosind
+ * algoritmul AES.
+ */
+
 package com.licenta.android.transfile_ii.backend.cryption;
 
 import java.io.File;

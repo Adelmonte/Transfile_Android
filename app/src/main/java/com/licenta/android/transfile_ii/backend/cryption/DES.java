@@ -1,3 +1,12 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa DES
+ * Folosită pentru criptarea și decriptarea datelor folosind
+ * algoritmul DES.
+ */
+
 package com.licenta.android.transfile_ii.backend.cryption;
 
 
@@ -11,7 +20,6 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
-
 import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.CipherOutputStream;

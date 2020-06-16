@@ -1,3 +1,10 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa MainActivity
+ * Este funcția centrală a Aplicației.
+ */
 package com.licenta.android.transfile_ii.frontend;
 
 import android.Manifest;

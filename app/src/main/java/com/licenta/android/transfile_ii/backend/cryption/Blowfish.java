@@ -1,26 +1,20 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Blowfish
+ * Folosită pentru criptarea și decriptarea datelor folosind
+ * algoritmul Blowfish.
+ */
+
 package com.licenta.android.transfile_ii.backend.cryption;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.security.Key;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.security.Key;
-
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
-
-/**
- * Algoritmul lucreaza pe intregul fisier. S-a constatat faptul ca marimea fisierului de intrare este mai
- * mica decat marimea fisierului de iesire.
- * COROLAR: Nu se poat citi, prelucrea si scrie bucati de fisier de sine statatoare
- */
 
 public class Blowfish
 {
@@ -44,35 +38,6 @@ public class Blowfish
         executa(Cipher.DECRYPT_MODE, IN, OUT);
         System.out.println("Fisier decriptat!");
     }
-
-/*	private static void executa(int cipherMode, File IN ,File OUT) throws Exception
-	{
-
-			Key secretKey = new SecretKeySpec(keyString.getBytes(), ALGORITHM);
-			Cipher cipher = Cipher.getInstance(ALGORITHM);
-			cipher.init(cipherMode, secretKey);
-
-			FileInputStream InStream = new FileInputStream(IN);
-			FileOutputStream OutStream = new FileOutputStream(OUT);
-
-
-			byte[] inBytes = new byte[2048];
-			byte[] outBytes = new byte[2048];
-			long p=InStream.available();
-			while (p!=0)
-			{
-				InStream.read(inBytes);
-
-				outBytes = cipher.doFinal(inBytes);
-
-				OutStream.write(outBytes);
-
-				p=InStream.available();
-			}
-
-			InStream.close();
-			OutStream.close();
-	}*/
 
     private static void executa(int cipherMode, File InFile,File OutFile) throws Exception
     {

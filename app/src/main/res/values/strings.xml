@@ -25,8 +25,8 @@
     <string name="alg_tag">Algoritmul de criptare</string>
     <string name="protocol_tag">Protocolul de transfer</string>
 
-    <string name="cl_tag">Setări Client</string>
-    <string name="sv_tag">Setări Server</string>
+    <string name="cl_tag">Setări pentru primirea fișierului</string>
+    <string name="sv_tag">Setări pentru trimiterea fișierului</string>
 
     <string name="port_server">Portul corespunzator server-ului</string>
     <string name="nr_port_sv">20000</string>
@@ -61,9 +61,46 @@
     <!-- Home fragment-->
 
     <string name="title">Bun venit!</string>
-    <string name="paragraph1">Pgfsgggggdffdgggd</string>
-    <string name="paragraph2">Pdggssssrvd</string>
-    <string name="paragraph3">Prtbrdvdb</string>
+    <string name="paragraph1">Instrucțiuni pentru utilizarea aplicației.</string>
+
+    <string name="paragraph2">Operații pentru trimiterea fișierului.</string>
+
+    <string name="paragraph3" formatted="true">
+        Întâi, se deschide meniul din stânga și se alege „Setări”. Aici, se selectează un protocol
+        de transfer, un algoritm de codare și se introduce numărul portului digital (obligatoriu mai
+        mare de 2000, dar mai mic de 65000). Se completează cu o adresă validă IPv4
+        și cu un numar de port digital, la secțiunea de primire a fișierului.
+        Se apasă butonul rotund din drapta jos, această acțiune având ca rezultat afișarea unui mesaj
+        care va conține „Setări salvate!” sau „Există o eroare!”. În continuare, se redeschide
+        meniul din dreapta și se selectează
+        „Trimite fișierul”. Pe ecran sunt două butoane. Se apasă butonul de selecție a unui fișier
+        (cel de sus), și se selectează fișierul dorit. După selecție aplicația va afișa un ecran cu
+        patru butoane. Este imperios să se apese butonul cel mai de sus, pentru a confirma selecția
+        fișierului. Există posibilitatea selecției altui fișier, a deschiderii fișierului selectat
+        în aplicație externă și posibilitatea revenirii la ecranul inițial. După acești pași, se
+        apasă butonul „Trimiteți fișierul”. În continuare, se vor urma instrucțiunile pentru
+        primirea fișierului din aplicația TransFile distantă.
+    </string>
+
+    <string name="paragraph4">Operații pentru primirea fișierului.</string>
+
+    <string name="paragraph5">
+         Întâi, se deschide meniul din stânga și se alege „Setări”. Aici, la secțiunea pentru
+        primirea fișierului, în prima casetă de introducere a textului se completează adresa Ipv4
+        validă a dispozitivului distant, iar la următorarea casetă de introducere a textului se
+        introduce un număr pentru portul digital dorit (același ca cel introdus la secțiunea de
+        trimitere a
+        fișierului de la aplicația distantă TransFile, obligatoriu mai mare de 2000, dar mai mic de
+        65000). Se selectează de la secțiunea „Setări pentru trimiterea fișierului”, un protocol de
+        transfer, un algoritm de codare si se introduce un număr de port digital
+        obligatoriu mai mare de 2000, dar mai mic de 65000).
+        Mai apoi, se apasă butonul rotund din dreapta jos, această acțiune având ca rezultat
+        afișarea unui mesaj care va conține „Setări salvate!” sau „Există o eroare!”.
+    </string>
+
+    <string name="paragraph6">Atenție, este obligatorie urmarea instrucțiunilor pentru trimiterea
+        mai întâi a fișierului, iar apoi cele pentru primirea fișierului!
+    </string>
 
     <!-- Settings Class-->
     <string name="save_sett">Setări salvate!</string>

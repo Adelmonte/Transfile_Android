@@ -1,11 +1,15 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Server
+ * Parte centrală a transferului de fișiere.
+ */
+
 package com.licenta.android.transfile_ii.backend.transfer;
 
-
-
-import android.os.Environment;
-
 import com.licenta.android.transfile_ii.backend.memory.Values;
-
+import android.os.Environment;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;

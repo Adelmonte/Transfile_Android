@@ -1,3 +1,10 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Settings
+ * Folosită ca parte automatizată a resursei settings_fragment.xml.
+ */
 package com.licenta.android.transfile_ii.frontend.fragments;
 
 import android.os.Bundle;
@@ -60,6 +67,8 @@ public class Settings extends Fragment implements View.OnClickListener
     public void onClick(View v)
     {
         err1=Link.clientSettings(ip.getText().toString(),portClient.getText().toString());
+
+
         err2=Link.serverSettings(protocol,algorithm,portServer.getText().toString());
 
         try {
@@ -73,10 +82,10 @@ public class Settings extends Fragment implements View.OnClickListener
         }
         catch (NullPointerException e)
         {
-            err3=true;
+            err2=true;
         }
 
-        if (err1||err2||err3)
+        if (err1||err2)
         {
             error.setText(R.string.error);
         }

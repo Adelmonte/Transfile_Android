@@ -1,11 +1,16 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Client
+ * Parte centrală a transferului de fișiere.
+ */
+
 package com.licenta.android.transfile_ii.backend.transfer;
 
 import android.os.Environment;
-
 import com.licenta.android.transfile_ii.backend.memory.Values;
-
 import com.licenta.android.transfile_ii.backend.cryption.Selector;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -325,24 +330,8 @@ public class Client extends Thread
         //int b=0;
         try
         {
-            //int available = is.available();
-            ///while (available !=0)
-            //{ available = is.available();
-            //    try
-            //    {
-            //        //b = is.read();
-            //        is.read(b);// citim din stream
-            //        fos.write(b);// scriem in fisier
-            //    }
-            //    catch (IOException e)
-            //    {
-            //    e.printStackTrace();
-            //    }
-            //} // end while
-
-            int ava = is.available();
-            // is.read(b, 0,b.length);
-            while(ava!=0)
+           int ava = is.available();
+           while(ava!=0)
             {
                 if (ava<1024)
                 {
@@ -389,10 +378,6 @@ public class Client extends Thread
         {
             e.printStackTrace();
         }
-
     }
-
-
-
 }
 

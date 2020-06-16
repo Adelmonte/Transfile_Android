@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundFileDown">
 
-    <Button
+    <android.support.design.button.MaterialButton
+        app:cornerRadius="50dp"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/text_but_color"
         android:id="@+id/button2"
         android:layout_width="300dp"
         android:layout_height="50dp"
-
         android:text="@string/select_file"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +21,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.570" />
 
-    <Button
+    <android.support.design.button.MaterialButton
+        app:cornerRadius="50dp"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/text_but_color"
         android:id="@+id/button3"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -30,7 +36,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.680" />
 
-    <Button
+    <android.support.design.button.MaterialButton
+        app:cornerRadius="50dp"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/text_but_color"
         android:id="@+id/caf"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -42,7 +51,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.790" />
 
-    <Button
+    <android.support.design.button.MaterialButton
+        app:cornerRadius="50dp"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/text_but_color"
         android:id="@+id/rsf"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -65,7 +77,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintVertical_bias="0.336"
+        android:background="@color/colorLinLayout"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -78,6 +91,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintVertical_bias="0.254"
+        android:background="@color/colorLinLayout"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,12 @@
-package com.licenta.android.transfile_ii.backend.cryption;
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa KeyCription
+ * Folosită pentru criptarea și decriptarea cheii
+ */
 
+package com.licenta.android.transfile_ii.backend.cryption;
 
 import com.licenta.android.transfile_ii.backend.memory.Values;
 import java.util.Random;

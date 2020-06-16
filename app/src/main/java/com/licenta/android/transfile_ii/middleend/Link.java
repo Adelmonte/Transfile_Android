@@ -1,3 +1,10 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicatia Android
+ *
+ * Clasa Link
+ * Folosită ca o legătură între backend și frontend.
+ */
 package com.licenta.android.transfile_ii.middleend;
 
 import android.os.Environment;

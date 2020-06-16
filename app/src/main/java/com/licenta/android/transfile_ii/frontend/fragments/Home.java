@@ -1,3 +1,10 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Home
+ * Folosită ca parte automatizată a resursei home_fragment.xml.
+ */
 package com.licenta.android.transfile_ii.frontend.fragments;
 
 import android.os.Bundle;

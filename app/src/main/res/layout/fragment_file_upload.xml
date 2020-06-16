@@ -9,7 +9,7 @@
 
     <!-- Server Fragment-->
 
-    <Button
+    <android.support.design.button.MaterialButton
         android:id="@+id/butsv"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -21,9 +21,12 @@
         app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.750" />
+        app:layout_constraintVertical_bias="0.750"
+        app:cornerRadius="50dp"
+        android:textColor="@color/text_but_color"
+        app:backgroundTint="@color/white"/>
 
-    <Button
+    <android.support.design.button.MaterialButton
         android:id="@+id/pick"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -35,9 +38,13 @@
         app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.640" />
+        app:layout_constraintVertical_bias="0.640"
+        android:textColor="@color/text_but_color"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="50dp"/>
 
     <TextView
+        android:background="@color/colorLinLayout"
         android:id="@+id/opo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -51,6 +58,7 @@
         app:layout_constraintVertical_bias="0.252" />
 
     <TextView
+        android:background="@color/colorLinLayout"
         android:id="@+id/server_file"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

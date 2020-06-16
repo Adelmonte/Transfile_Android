@@ -7,35 +7,11 @@
     android:background="@color/colorBackgroundFileDown"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/but_cl"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/start_client"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.640" />
-
-    <Button
-        android:id="@+id/but_op"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/open_file_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.750" />
-
     <TextView
         android:id="@+id/opo"
         android:layout_width="201dp"
         android:layout_height="27dp"
+        android:background="@color/colorLinLayout"
         android:text="@string/info_path"
         android:textColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,11 +25,45 @@
         android:id="@+id/path"
         android:layout_width="253dp"
         android:layout_height="41dp"
+        android:background="@color/colorLinLayout"
         android:text="@string/path"
         android:textColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324" />
+        app:layout_constraintVertical_bias="0.349" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/but_cl"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/text_but_color"
+        app:backgroundTint="@color/white"
+        android:text="@string/start_client"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.640" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/but_op"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/open_file_2"
+        android:textColor="@color/text_but_color"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
 </android.support.constraint.ConstraintLayout>

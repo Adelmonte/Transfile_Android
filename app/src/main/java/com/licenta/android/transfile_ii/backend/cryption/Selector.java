@@ -1,3 +1,11 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Selector
+ * Folosită pentru selectarea corectă a algoritmului de decriptare.
+ */
+
 package com.licenta.android.transfile_ii.backend.cryption;
 
 import com.licenta.android.transfile_ii.backend.memory.Values;

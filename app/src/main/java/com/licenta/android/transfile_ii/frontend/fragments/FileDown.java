@@ -1,3 +1,11 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa FileDown
+ * Folosită ca parte automatizată a resursei filedown_fragment.xml.
+ */
+
 package com.licenta.android.transfile_ii.frontend.fragments;
 
 import android.content.ActivityNotFoundException;

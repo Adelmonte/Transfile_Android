@@ -1,3 +1,11 @@
+/* Lucrare de licență: Aplicație pentru transfer de fișiere
+ * Student: Mihai-Alexandru Muntean
+ * Aplicația Android
+ * 
+ * Clasa Values
+ * Folosită pentru memorarea informațiilor corespunzătoare backend.
+ */
+
 package com.licenta.android.transfile_ii.backend.memory;
 
 import java.io.File;
@@ -30,38 +38,6 @@ public class Values
     public static boolean getEnable()
     {
         return Values.enable;
-    }
-
-
-
-
-    /***/
-    /**
-     * Adauga lui {@code s} caracterul {@code regex} pana cand are lungimea {@code nr}.
-     * @param s string: string-ul de completat
-     * @param regex string: caracterul de completare
-     * @param nr int: lungimea stringului dorit
-     * @return string-ul rezultat
-     */
-    public static String padding(String s,String regex, int nr)
-    {
-        while (s.length()!=nr)
-        {
-            s=s+regex;
-        }
-        return s;
-    }
-
-    /**
-     * Selecteaza primele {@code nr} caractere din {@code s}
-     * @param s String: string-ul de operat
-     * @param nr int: numarul de caractere al string-ului returnat
-     * @return
-     */
-    public static String unpadding(String s, int nr)
-    {
-        s=s.substring(0, nr);
-        return s;
     }
 
     // Networking
@@ -266,6 +242,7 @@ public class Values
 
     public static void setAlgorithm(String alg)
     {
+	Values.padding(alg," ",8);
         Values.Algorithm = alg;
     }
 
@@ -332,5 +309,35 @@ public class Values
             }
         return manevra;
     }
+
+/***/
+	/**
+	 * Adauga lui {@code s} caracterul {@code regex} pana cand are 
+         * lungimea {@code nr}.
+	 * @param s string: string-ul de completat
+	 * @param regex string: caracterul de completare
+	 * @param nr int: lungimea stringului dorit
+	 * @return string-ul rezultat
+	 */
+	public static String padding(String s,String regex, int nr)
+	{
+		while (s.length()!=nr)
+		{
+			s=s+regex;
+		}
+		return s;
+	}
+	
+	/**
+	 * Selecteaza primele {@code nr} caractere din {@code s}
+	 * @param s String: string-ul de operat
+	 * @param nr int: numarul de caractere al string-ului returnat
+	 * @return 
+	 */
+	public static String unpadding(String s, int nr)
+	{
+			s=s.substring(0, nr);
+		return s;
+	}
 }
 

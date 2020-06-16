@@ -7,9 +7,9 @@
     android:background="@color/colorBackgroundHome">
 
     <ScrollView
-        android:layout_width="340dp"
-        android:layout_height="520dp"
-        android:layout_margin="40dp"
+        android:layout_width="400dp"
+        android:layout_height="590dp"
+        android:layout_margin="10dp"
         android:id="@+id/scrollView"
         android:layout_below="@+id/tx"
         >
@@ -17,11 +17,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/colorLinLayout">
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="300dp"
+                android:layout_width="290dp"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginBottom="30dp"
@@ -30,21 +32,51 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="300dp"
+                android:textSize="16sp"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginBottom="35dp"
+                android:layout_margin="1dp"
+                android:layout_marginBottom="15dp"
                 android:text="@string/paragraph2"
                 android:textColor="@color/text_color" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="300dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginBottom="30dp"
                 android:text="@string/paragraph3"
                 android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:textSize="16sp"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/paragraph4"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/paragraph5"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/paragraph6"
+                android:textColor="#BF360C"
+                android:textSize="16sp"/>
 
         </LinearLayout>
     </ScrollView>
@@ -53,12 +85,8 @@
         android:id="@+id/tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
         android:text="@string/title"
         android:textColor="@color/text_color"
         android:textSize="30sp" />
