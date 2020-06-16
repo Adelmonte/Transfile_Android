@@ -10,11 +10,12 @@
     <string name="file_up">Trimite fișier</string>
     <string name="file_down">Recepționează fișier</string>
 
-    <string name="sett_frag_title">Fragmentul de setări</string>
+    <!-- Settings Fragment -->
+    <string name="sett_frag_title">Setări</string>
     <string name="error">"Introduceți corect parametrii transmisiei!!!"</string>
     <string name="hint_ip">"Inserați adresa IPv4 a dispozitivului server."</string>
     <string name="hint_port">"Inserați portul logic de comunicare cu dispozitivul server."</string>
-
+    <string name="port_server_hint">Inserați portul logic de comunicare cu dispozitivul client.</string>
     <string name="ftps">File Transfer Protocol Secured</string>
     <string name="ftp">File Transfer Protocol</string>
     <string name="des">Data Encryption Standard</string>
@@ -27,6 +28,46 @@
     <string name="cl_tag">Setări Client</string>
     <string name="sv_tag">Setări Server</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="port_server">Portul corespunzator server-ului</string>
+    <string name="nr_port_sv">20000</string>
+    <string name="nr_port_cl">5001</string>
+    <string name="ip">192.168.0.108</string>
+    <string name="err">Nu sunt erori!</string>
+
+    <!-- Filedescr fragment -->
+
+    <string name="select_file">Selectează fișier</string>
+    <string name="open_file">Vizualizați fișierul!</string>
+    <string name="choose_another_file">Alege alt fișier</string>
+    <string name="go_back">Înapoi</string>
+    <string name="path_file">Ați selectat următorul fișier:</string>
+    <string name="selected_path_file">Nu ați selectat nici un fișier.</string>
+
+    <!-- Server fragment // Fileup-->
+
+    <string name="start_server">Trimiteți fișierul</string>
+    <string name="pick_file">Alegeți fișierul dorit pentru transfer</string>
+
+    <!-- FileUp Class-->
+
+    <string name="server_info">Calea fișierului ales este:</string>
+    <!-- Client fragment // File Down-->
+
+    <string name="start_client">Permiteți primirea fișierului!</string>
+    <string name="open_file_2">Vizualizați fișierul primit!</string>
+    <string name="info_path">Fișierul este salvat la locația:</string>
+    <string name="path">Fișierul încă nu a fost primit</string>
+
+    <!-- Home fragment-->
+
+    <string name="title">Bun venit!</string>
+    <string name="paragraph1">Pgfsgggggdffdgggd</string>
+    <string name="paragraph2">Pdggssssrvd</string>
+    <string name="paragraph3">Prtbrdvdb</string>
+
+    <!-- Settings Class-->
+    <string name="save_sett">Setări salvate!</string>
+    <!-- FileUp Class-->
+    <string name="file_rec">Fișierul a fost primit!</string>
+
 </resources>

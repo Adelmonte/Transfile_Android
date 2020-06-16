@@ -6,11 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.licenta.android.transfile_ii.R;
 import com.licenta.android.transfile_ii.middleend.Link;
@@ -24,37 +24,45 @@ public class Settings extends Fragment implements View.OnClickListener
     RadioButton rb;
     String protocol;
     String algorithm;
-    int err;
+    boolean err1;
+    boolean err2;
+    boolean err3;
+
     // partea client
 
     EditText ip;
-    EditText port;
+    EditText portClient;
 
     // partea server
 
     RadioGroup prot;
     RadioGroup alg;
-
-
+    EditText portServer;
+    int radioint;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
 
         view = inflater.inflate(R.layout.fragment_settings, container, false);
         btn =  view.findViewById(R.id.floatActBtn);
         error = view.findViewById(R.id.err);
         ip = view.findViewById(R.id.ipv4);
-        port = view.findViewById(R.id.port);
-
-        alg = view.findViewById(R.id.protocol);
-        prot = view.findViewById(R.id.algorithm);
-        int radioint;
+        portClient = view.findViewById(R.id.portClient);
+        portServer = view.findViewById(R.id.portServer);
+        alg = view.findViewById(R.id.algorithm);
+        prot = view.findViewById(R.id.protocol);
 
         btn.setOnClickListener(this);
+        return view;
+    }
 
-        if (err!=0)
-        {
-           error.setText(R.string.error);
+    @Override
+    public void onClick(View v)
+    {
+        err1=Link.clientSettings(ip.getText().toString(),portClient.getText().toString());
+        err2=Link.serverSettings(protocol,algorithm,portServer.getText().toString());
 
+        try {
             radioint = alg.getCheckedRadioButtonId();
             rb = view.findViewById(radioint);
             algorithm = rb.getText().toString();
@@ -63,14 +71,17 @@ public class Settings extends Fragment implements View.OnClickListener
             rb = view.findViewById(radioint);
             protocol = rb.getText().toString();
         }
-        return view;
-    }
+        catch (NullPointerException e)
+        {
+            err3=true;
+        }
 
-    @Override
-    public void onClick(View v)
-    {
-        err=0;
-        err=Link.clientSettings(ip.getText().toString(),port.getText().toString());
-        Link.serverSettings(protocol,algorithm);
+        if (err1||err2||err3)
+        {
+            error.setText(R.string.error);
+        }
+        else
+            Toast.makeText(getContext(),R.string.save_sett, Toast.LENGTH_SHORT).show();
+
     }
 }

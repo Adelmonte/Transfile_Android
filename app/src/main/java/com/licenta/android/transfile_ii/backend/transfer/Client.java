@@ -81,6 +81,7 @@ public class Client extends Thread
 
         decrypt= this.createFilePath(path,this.nameFile);
         Selector.algorithmSelector(crypt,decrypt, Cipher.DECRYPT_MODE);
+        Values.setPath(decrypt.getAbsolutePath());
         System.out.println("Fisier decriptat");
 
         this.closeInputStream(this.s_in);

@@ -67,31 +67,88 @@ public class Values
     // Networking
 
     /***/
-    private static int PORT;
+    private static int PORTClient;
 
     /**
      *
-     * @param port an integer number from 1 to 65536
+     * @param prt a number from 1 to 65536
      * @return 1 if port exists
      * 			0 if not
      */
-    public static int setPort(int port)
+    public static boolean setPortClient(String prt)
     {
-
+        boolean err=false;
+        int port=-1;
+        try {
+            port = Integer.parseInt(prt);
+        }
+        catch(NumberFormatException e)
+        {
+            err=true;
+        }
         if ((port>0) && (port <65536))
         {
-            Values.PORT = port;
-            return 0;
+            Values.PORTClient = port;
         }
         else
-            return 1;
+            err=true;
+            return err;
     }
 
-    public static int getPort()
+    public static int getPortClient()
     {
-        return Values.PORT;
+        return Values.PORTClient;
     }
 
+
+    /***/
+    private static int PORTServer;
+
+    /**
+     *
+     * @param prt a number from 1 to 65536
+     * @return 1 if port exists
+     * 			0 if not
+     */
+    public static boolean setPortServer(String prt)
+    {
+        boolean err=false;
+        int port=-1;
+        try {
+             port = Integer.parseInt(prt);
+        }
+        catch(NumberFormatException e)
+        {
+            err=true;
+        }
+        if ((port>0) && (port <65536))
+        {
+            Values.PORTServer = port;
+
+        }
+        else
+            err=true;
+        return err;
+    }
+
+    public static int getPortServer()
+    {
+        return Values.PORTServer;
+    }
+
+    /***/
+
+    private static String thisIP;
+
+    public static String getThisIP()
+    {
+        return Values.thisIP;
+    }
+
+    public static void setThisIP(String ip)
+    {
+        Values.thisIP= ip;
+    }
     /***/
     private static String IPv4;
 

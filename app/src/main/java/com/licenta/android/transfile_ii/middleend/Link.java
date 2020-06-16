@@ -18,21 +18,14 @@ public class Link
     public static void serverCall()
     {
         //start server
-        Values.setEnable(false); // for files
-        // String p = "/TransFileUpload/SEC.pdf";
-        //
-        //openActivity();
         Values.setAlgorithm("NOTHING ");
 
         Values.setKey(KeyCryption.cryptKey(Values.getAlgorithm()));
 
-
-
-
         String j; //= Environment.getExternalStorageDirectory().getAbsolutePath() + p;
         j=Values.getPath(); // se preia path de la alegeea fisierului
         File F = new File(j);
-        // /*
+
         //String alg = "NOTHING ";//"DES     ";  "AES     ";  "BLOWFISH";
         //Values.setAlgorithm(alg);
 
@@ -54,11 +47,8 @@ public class Link
             e.printStackTrace();
         }
         Selector.algorithmSelector(M, OUT, Cipher.ENCRYPT_MODE);
-//  */
-        int port = 20000;
-        //TransferServer TS = new TransferServer(4000,F);
-        //TS.execute("");
-        Server TS = new Server(port, OUT);
+
+        Server TS = new Server(Values.getPortServer(), OUT);
         TS.start();
         try
         {
@@ -68,32 +58,63 @@ public class Link
         {
             e.printStackTrace();
         }
-        //TS.run();
         OUT.delete();
         M.renameTo(new File(path + "/"+s));
     }
 
-    public static void clientCall()
+    public static boolean clientCall()
     {
+        boolean state=false;
         File path = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/TransFileDownload");
-        //TransferFile TF = new TransferFile(5001,"192.168.0.104", path);
-        //TF.execute("");
 
-        Client TC = new Client(5001, "192.168.0.108", path);
+        Client TC = new Client(Values.getPortClient(), Values.getIpv4(), path);
         TC.start();
+        try
+        {
+            TC.join();
+            state=true;
+        }
+        catch(InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+        return state;
     }
 
-    public static int clientSettings(String ipv4, String port)
+
+
+
+
+    /***/
+
+    public static String getClientFilePath()
     {
-        int err = 0;
-        err=Values.setIpv4(ipv4);
-        err=Values.setPort(Integer.parseInt(port));
+        return Values.getPath();
+    }
+
+    public static boolean clientSettings(String ipv4, String port)
+    {
+        boolean err=false,err1;
+        int err2;
+
+        err2=Values.setIpv4(ipv4);
+        err1=Values.setPortClient(port);
+        if (err1||(err2==1))
+            err=true;
         return err;
     }
 
-    public static void serverSettings(String prot, String alg)
+
+
+    public static String getServerFilePath()
     {
-        prot="FTP";
+        return Values.getPath();
+    }
+
+    public static boolean serverSettings(String prot, String alg,String port)
+    {
+
+        prot="FTP"; /************************************************/
         if (prot.equals("FTP"))
         {
             Values.setAlgorithm("NOTHING");
@@ -103,12 +124,18 @@ public class Link
             {
                 Values.setAlgorithm(alg);
             }
+
+
+              boolean err=  Values.setPortServer(port);
+            return err;
     }
 
     public static void setServerPath(String path)
     {
         Values.setPath(path);
     }
+
+
 
     public static String adjustFilePath(String path)
     {

@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.licenta.android.transfile_ii.R;
 import com.licenta.android.transfile_ii.middleend.Link;
 
@@ -18,6 +20,7 @@ import com.licenta.android.transfile_ii.middleend.Link;
     Button btn;
     Button btn2;
     Intent fileIntent;
+    TextView tw;
 
 
     @Override
@@ -26,6 +29,9 @@ import com.licenta.android.transfile_ii.middleend.Link;
 
 
         view = inflater.inflate(R.layout.fragment_file_upload, container, false);
+        tw = view.findViewById(R.id.server_file);
+
+        // start server
         btn =  view.findViewById(R.id.butsv);
         btn.setOnClickListener(new View.OnClickListener()
         {
@@ -36,6 +42,7 @@ import com.licenta.android.transfile_ii.middleend.Link;
             }
         });
 
+        // alege fisier
         btn2 = view.findViewById(R.id.pick);
         btn2.setOnClickListener(new View.OnClickListener()
         {
@@ -47,6 +54,7 @@ import com.licenta.android.transfile_ii.middleend.Link;
                 // folder, permite vizualizea doar a folderelor
 
                 startActivityForResult(fileIntent,10);
+                tw.setText(Link.getServerFilePath());
 
             }
         });
@@ -60,17 +68,16 @@ import com.licenta.android.transfile_ii.middleend.Link;
             case 10: {
                 if (resultCode == Activity.RESULT_OK)
                 {
-
-                    System.out.println("Ajunge aici");
                     FileDescr fileDescr = new FileDescr();
                     fileDescr.setIntent(data);
                     try
                     {
                         getActivity().
                                 getSupportFragmentManager().
-                                beginTransaction().
-                                replace(R.id.fragment_container, fileDescr).
-                                commit();
+                                    beginTransaction().
+                                        replace(R.id.fragment_container, fileDescr).
+                                            commit();
+
                     }
                     catch (NullPointerException e)
                     {

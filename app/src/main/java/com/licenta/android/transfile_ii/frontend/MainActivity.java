@@ -1,4 +1,4 @@
-package com.licenta.android.transfile_ii;
+package com.licenta.android.transfile_ii.frontend;
 
 import android.Manifest;
 import android.content.Context;
@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.licenta.android.transfile_ii.R;
 import com.licenta.android.transfile_ii.frontend.fragments.FileDown;
 import com.licenta.android.transfile_ii.frontend.fragments.FileUp;
 import com.licenta.android.transfile_ii.frontend.fragments.Home;

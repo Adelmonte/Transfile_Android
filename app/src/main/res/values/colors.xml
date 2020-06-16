@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#0F1F2F</color>
+    <color name="colorPrimaryDark">#1D2A4D</color>
+    <color name="colorAccent">#0F1F2F</color>
     <color name="colorGrey">#505050</color>
 
-    <color name="colorBackgroundSettings">#FFFFFF</color>
-    <color name="colorBackgroundHome">#FFFFFF</color>
-    <color name="colorBackgroundFileDown">#FFFFFF</color>
-    <color name="colorBackgroundFileUp">#FFFFFF</color>
+    <color name="colorBackgroundSettings">#FFAB40</color>
+    <color name="colorBackgroundHome">#FFAB40</color>
+    <color name="colorBackgroundFileDown">#FFAB40</color>
+    <color name="colorBackgroundFileUp">#FFAB40</color>
 
     <color name="colorBlueSaintAlbert">#0F1F2F</color>
     <color name="colorNavHeader">#678DDE</color>
-    <color name="colorBrownSaintAlbert">#5C341C</color>
-    <color name="colorOrangeSaintAlbert">#F05C22</color>
+    <color name="colorBrownSaintAlbert">#FFAB40</color>
+    <color name="colorOrangeSaintAlbert">#F04822</color>
+
+    <color name="text_color">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

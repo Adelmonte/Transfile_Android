@@ -1,5 +1,6 @@
 package com.licenta.android.transfile_ii.frontend.fragments;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,8 @@ public class FileDescr extends Fragment {
     View view;
     Button btn1;
     Button btn2;
+    Button btn3;
+    Button btn4;
     TextView tw;
     Intent thisIntent;
 
@@ -38,7 +41,7 @@ public class FileDescr extends Fragment {
 
         tw = view.findViewById(R.id.textView);
 
-        btn1 = view.findViewById(R.id.button2); //pick file
+        btn1 = view.findViewById(R.id.button2); //selecteaza fisier
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,11 +53,11 @@ public class FileDescr extends Fragment {
             }
         });
 
-        btn2 = view.findViewById(R.id.button3); // open file
+        btn2 = view.findViewById(R.id.button3); // deschide fisier
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // dechide in aplicatie externa fisierul
+                // deschide in aplicatie externa fisierul
                 String path = thisIntent.getData().getPath();
                 path = Link.adjustFilePath(path);
                 File file = new File(path);
@@ -62,7 +65,64 @@ public class FileDescr extends Fragment {
                 openFile(file);
             }
         });
+
+        btn3 = view.findViewById(R.id.rsf); //inapoi
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                try
+                {
+                    getFragmentManager().
+                            beginTransaction().
+                                replace(R.id.fragment_container, new FileUp()).
+                                    commit();
+                }
+                catch (NullPointerException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        btn4 = view.findViewById(R.id.caf); //alt fisier
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent fileIntent=new Intent(Intent.ACTION_GET_CONTENT);
+                fileIntent.setType("*/*");
+                // folder, permite vizualizea doar a folderelor
+
+                startActivityForResult(fileIntent,10);
+            }
+        });
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode,  Intent data)
+    {
+        switch (requestCode) {
+            case 10: {
+                if (resultCode == Activity.RESULT_OK)
+                {
+
+                    FileDescr fileDescr = new FileDescr();
+                    fileDescr.setIntent(data);
+                    try {
+                        getActivity().
+                                getSupportFragmentManager().
+                                beginTransaction().
+                                replace(R.id.fragment_container, fileDescr).
+                                commit();
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            break;
+        }
     }
 
     private void openFile(File url) {

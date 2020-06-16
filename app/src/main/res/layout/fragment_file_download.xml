@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundFileDown"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/opo"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/but_cl"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Client"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/start_client"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.640" />
 
     <Button
-        android:layout_centerInParent="true"
-        android:id="@+id/butcl"
-        android:layout_width="match_parent"
+        android:id="@+id/but_op"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Start Client!"
-        android:layout_margin="7mm"
-        />
-</RelativeLayout>
+        android:text="@string/open_file_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.750" />
+
+    <TextView
+        android:id="@+id/opo"
+        android:layout_width="201dp"
+        android:layout_height="27dp"
+        android:text="@string/info_path"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <TextView
+        android:id="@+id/path"
+        android:layout_width="253dp"
+        android:layout_height="41dp"
+        android:text="@string/path"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+</android.support.constraint.ConstraintLayout>
