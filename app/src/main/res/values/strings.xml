@@ -13,9 +13,9 @@
     <!-- Settings Fragment -->
     <string name="sett_frag_title">Setări</string>
     <string name="error">"Introduceți corect parametrii transmisiei!!!"</string>
-    <string name="hint_ip">"Inserați adresa IPv4 a dispozitivului server."</string>
-    <string name="hint_port">"Inserați portul logic de comunicare cu dispozitivul server."</string>
-    <string name="port_server_hint">Inserați portul logic de comunicare cu dispozitivul client.</string>
+    <string name="hint_ip">"Adresa IPv4 a dispozitivului server."</string>
+    <string name="hint_port">"Portul de comunicare cu serverul."</string>
+    <string name="port_server_hint">Portul de comunicare cu clientul.</string>
     <string name="ftps">File Transfer Protocol Secured</string>
     <string name="ftp">File Transfer Protocol</string>
     <string name="des">Data Encryption Standard</string>

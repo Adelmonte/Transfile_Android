@@ -35,6 +35,9 @@ public class FileDown extends Fragment
     boolean state;
     TextView tw;
     String path;
+    String text;
+    TextView tw1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -45,6 +48,10 @@ public class FileDown extends Fragment
         btn2 = view.findViewById(R.id.but_op);
         btn2.setEnabled(state);
         tw= view.findViewById(R.id.path);
+        tw1= view.findViewById(R.id.opo);
+        tw1.setText("");
+        text="Fișierul este salvat la locația:";
+
 
         // start client
         btn.setOnClickListener(new View.OnClickListener()
@@ -57,6 +64,7 @@ public class FileDown extends Fragment
                 tw.setText(path);
                 if (state)
                 {
+                    tw1.setText(text);
                     Toast.makeText(getContext(),R.string.file_rec, Toast.LENGTH_SHORT).show();
                 }
                 btn2.setEnabled(state);

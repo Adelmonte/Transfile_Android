@@ -101,6 +101,8 @@ public class Link
 
     public static boolean clientSettings(String ipv4, String port)
     {
+        // variabilele err sunt folosite pentru semnaliarea eventualelor erori aparute
+        // pt err=true o eroare s-a intamplat
         boolean err=false,err1;
         int err2;
 
