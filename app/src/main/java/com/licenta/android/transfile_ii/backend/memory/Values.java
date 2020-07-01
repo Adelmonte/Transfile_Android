@@ -13,16 +13,28 @@ import java.io.File;
 public class Values
 {
     // path of the file; used in FileBrowser and MainActivity
-    private static String path;
+    private static String spath;
 
-    public static String getPath()
+    public static String getSPath()
     {
-        return Values.path;
+        return Values.spath;
     }
 
-    public static void setPath(String cale)
+    public static void setSPath(String cale)
     {
-        Values.path=cale;
+        Values.spath=cale;
+    }
+
+    private static String cpath;
+
+    public static String getCPath()
+    {
+        return Values.cpath;
+    }
+
+    public static void setCPath(String cale)
+    {
+        Values.cpath=cale;
     }
 
     // used for enabling or not the choosing of a file or a folder
@@ -48,14 +60,14 @@ public class Values
     /**
      *
      * @param prt a number from 1 to 65536
-     * @return 1 if port exists
-     * 			0 if not
+     * @return true if port not exists
      */
     public static boolean setPortClient(String prt)
     {
         boolean err=false;
         int port=-1;
-        try {
+        try
+        {
             port = Integer.parseInt(prt);
         }
         catch(NumberFormatException e)
@@ -131,8 +143,8 @@ public class Values
     /**
      *
      * @param ip a string contains IPv4 adress
-     * @return 1 if IPv4 adress is valid
-     * 			0 if not
+     * @return 0 if IPv4 adress is valid
+     * 		   1 if not
      */
     public static int setIpv4(String ip)
     {
@@ -302,7 +314,7 @@ public class Values
             {
                 manevra="/storage/62A2-4A17/";
                 int supBound = path.length();
-                for (int i=infBound;i<supBound;i++)
+                for (int i=infBound+1;i<supBound;i++)
                 {
                     manevra = manevra + path.charAt(i);
                 }
@@ -339,5 +351,56 @@ public class Values
 			s=s.substring(0, nr);
 		return s;
 	}
+
+	private static boolean verifyDupplicate(File folder, String  filename)
+    {
+        boolean p=false;
+        if (folder.isDirectory())
+        {
+            File[] list = folder.listFiles();
+            for (int i=0; i<list.length;i++)
+            {
+                String f1 = list[i].getName();
+                if (filename.equals(f1))
+                    p=true;
+            }
+        }
+        else
+            p=true;
+        return p;
+    }
+
+    public static String adjustNameFile(File folder, String fileName, int iteration)
+    {
+        // de reverificat
+        String name="";
+
+        if (Values.verifyDupplicate(folder, fileName))
+        {
+            iteration++;
+            int p;
+            p= fileName.lastIndexOf('.');
+            int j=0;
+            while (j<fileName.length())
+            {
+                if (j!=p)
+                {
+                    name= name+fileName.charAt(j);
+                }
+                else
+                {
+                    name=name+"("+iteration+").";
+                }
+                j++;
+            }
+            while (Values.verifyDupplicate(folder, name))
+            {
+                name=Values.adjustNameFile(folder, name,iteration);
+            }
+        }
+        else
+            name=fileName;
+            return name;
+    }
 }
 

@@ -46,7 +46,7 @@ public class FileDown extends Fragment
 
         btn =  view.findViewById(R.id.but_cl);
         btn2 = view.findViewById(R.id.but_op);
-        btn2.setEnabled(state);
+        btn2.setEnabled(false);
         tw= view.findViewById(R.id.path);
         tw1= view.findViewById(R.id.opo);
         tw1.setText("");

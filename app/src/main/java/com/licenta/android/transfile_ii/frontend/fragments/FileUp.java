@@ -26,6 +26,8 @@ import com.licenta.android.transfile_ii.middleend.Link;
     View view;
     Button btn;
     Button btn2;
+    Button btn3;
+
     Intent fileIntent;
     TextView tw;
 
@@ -61,8 +63,17 @@ import com.licenta.android.transfile_ii.middleend.Link;
                 // folder, permite vizualizea doar a folderelor
 
                 startActivityForResult(fileIntent,10);
-                tw.setText(Link.getServerFilePath());
 
+
+            }
+        });
+
+        btn3= view.findViewById(R.id.butpath);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                tw.setText(Link.getServerPath());
             }
         });
         return view;
@@ -84,7 +95,7 @@ import com.licenta.android.transfile_ii.middleend.Link;
                                     beginTransaction().
                                         replace(R.id.fragment_container, fileDescr).
                                             commit();
-
+                        tw.setText(Link.getServerPath());
                     }
                     catch (NullPointerException e)
                     {

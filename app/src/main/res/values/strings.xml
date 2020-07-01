@@ -48,9 +48,10 @@
     <string name="start_server">Trimiteți fișierul</string>
     <string name="pick_file">Alegeți fișierul dorit pentru transfer</string>
 
-    <!-- FileUp Class-->
+    <!-- FileUp  fragment-->
 
     <string name="server_info">Calea fișierului ales este:</string>
+    <string name="sel">Afișați calea selectată</string>
     <!-- Client fragment // File Down-->
 
     <string name="start_client">Permiteți primirea fișierului!</string>
@@ -68,7 +69,8 @@
     <string name="paragraph3" formatted="true">
         Întâi, se deschide meniul din stânga și se alege „Setări”. Aici, se selectează un protocol
         de transfer, un algoritm de codare și se introduce numărul portului digital (obligatoriu mai
-        mare de 2000, dar mai mic de 65000). Se completează cu o adresă validă IPv4
+        mare de 2000, dar mai mic de 65000, același ca cel introdus la secțiunea de recepționare a
+        fișierului de la aplicația distantă TransFile). Se completează cu o adresă validă IPv4
         și cu un numar de port digital, la secțiunea de primire a fișierului.
         Se apasă butonul rotund din drapta jos, această acțiune având ca rezultat afișarea unui mesaj
         care va conține „Setări salvate!” sau „Există o eroare!”. În continuare, se redeschide

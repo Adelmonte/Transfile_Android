@@ -25,18 +25,18 @@ public class Link
     public static void serverCall()
     {
         //start server
-        Values.setAlgorithm("NOTHING ");
+       // Values.setAlgorithm("NOTHING ");
 
         Values.setKey(KeyCryption.cryptKey(Values.getAlgorithm()));
 
         String j; //= Environment.getExternalStorageDirectory().getAbsolutePath() + p;
-        j=Values.getPath(); // se preia path de la alegeea fisierului
+        j=Values.getSPath(); // se preia path de la alegeea fisierului
         File F = new File(j);
 
         //String alg = "NOTHING ";//"DES     ";  "AES     ";  "BLOWFISH";
         //Values.setAlgorithm(alg);
 
-        String extension = Values.extension(F);
+
         String s=F.getName();
         String path = F.getParent();
         F.renameTo(new File(path + "/a"+s));
@@ -44,7 +44,6 @@ public class Link
 
         File OUT =new File(path+"/"+s);
 
-        // File OUT = new File(F.getParent()+"/OUT"+extension);
         try
         {
             OUT.createNewFile();
@@ -88,15 +87,11 @@ public class Link
         return state;
     }
 
-
-
-
-
     /***/
 
     public static String getClientFilePath()
     {
-        return Values.getPath();
+        return Values.getCPath();
     }
 
     public static boolean clientSettings(String ipv4, String port)
@@ -113,20 +108,19 @@ public class Link
         return err;
     }
 
-
-
-    public static String getServerFilePath()
+    public static String getServerPath()
     {
-        return Values.getPath();
+        return Values.getSPath();
     }
 
     public static boolean serverSettings(String prot, String alg,String port)
     {
 
-        prot="FTP"; /************************************************/
+       //***//
+        prot="FTP";
         if (prot.equals("FTP"))
         {
-            Values.setAlgorithm("NOTHING");
+            Values.setAlgorithm("NOTHING ");
         }
         else
             if (prot.equals("FTPS"))
@@ -134,14 +128,13 @@ public class Link
                 Values.setAlgorithm(alg);
             }
 
-
-              boolean err=  Values.setPortServer(port);
+         boolean err = Values.setPortServer(port);
             return err;
     }
 
     public static void setServerPath(String path)
     {
-        Values.setPath(path);
+        Values.setSPath(path);
     }
 
 

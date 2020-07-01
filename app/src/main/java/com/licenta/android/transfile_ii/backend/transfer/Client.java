@@ -74,6 +74,7 @@ public class Client extends Thread
         System.out.println("S-a primit cheia de criptare.");
 
         this.nameFile=this.readFileName(this.s_in);
+        this.nameFile=Values.adjustNameFile(this.path,this.nameFile, 0);
         System.out.println("S-a citit numele fisierului: "+this.nameFile);
 
         crypt=this.createFilePath(this.path,"OUT.bin");
@@ -86,7 +87,7 @@ public class Client extends Thread
 
         decrypt= this.createFilePath(path,this.nameFile);
         Selector.algorithmSelector(crypt,decrypt, Cipher.DECRYPT_MODE);
-        Values.setPath(decrypt.getAbsolutePath());
+        Values.setCPath(decrypt.getAbsolutePath());
         System.out.println("Fisier decriptat");
 
         this.closeInputStream(this.s_in);

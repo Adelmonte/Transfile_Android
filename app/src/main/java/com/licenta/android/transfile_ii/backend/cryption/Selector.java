@@ -102,33 +102,6 @@ public class Selector
 
     }
 
-    /**
-     *
-     * @param IN
-     * @param OUT
-     * @param way
-     */
-    private static void xchgName(File IN, File OUT, int way)
-    {
-        String inName=IN.getName();
-        String outName=OUT.getName();
-
-        String inParent = IN.getParent();
-        String outParent = OUT.getParent();
-
-        File newIN;
-        File newOut;
-        if (way== Cipher.DECRYPT_MODE)
-        {
-            ;
-        }
-        else
-        if (way==Cipher.ENCRYPT_MODE)
-        {
-
-        }
-    }
-
     private static void xchgFile(File IN, File OUT)
     {
         try
